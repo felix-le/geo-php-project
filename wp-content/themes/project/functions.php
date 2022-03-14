@@ -390,18 +390,13 @@ add_action('init', 'my_project_post_type');
 
 // tag
 
-// function my_first_taxonomy(){
+function my_first_taxonomy(){
 
-// 	$args = array(
-// 		'labels'=> array(
-// 			'name' => 'Brands',
-// 			'singular_name' => 'Brand'
-// 		),
+	$args = array(
+		'public' => true,
+		'hierarchical' => true,
+	);
 
-// 		'public' => true,
-// 		'hierarchical' =>true,
-// 	);
-
-// 	register_taxonomy('brands', array('projects') $args);
-// }
-// add_action('init', 'my_first_taxonomy', 0);
+	register_taxonomy('brands', array('projects'), $args);
+}
+add_action('init', 'my_first_taxonomy',0);
