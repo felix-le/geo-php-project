@@ -474,5 +474,5 @@ composer.lock
 *.scss.map
 DS_Store
 
-# wp-includes/js/crop/cropper.js
-# wp-includes/js/jquery/jquery.schedule.js
+wp-includes/js/crop/cropper.js
+wp-includes/js/jquery/jquery.schedule.js
