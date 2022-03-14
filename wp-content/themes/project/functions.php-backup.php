@@ -361,26 +361,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Block Patterns.
  */
 require get_template_directory() . '/inc/block-patterns.php';
-
-function my_project_post_type(){
-
-	$args = array(
-
-		'labels'=> array(
-			'name' => 'Projects',
-			'singular_name' => 'Project'
-		),
-		'hierarchical' =>true,
-		'public' =>true,
-		'has_archive' => true,
-		'supports' => array('title', 'editor', 'thumbnail'),
-		'menu_icon' => 'dashicons-media-code',
-		// 'rewrite' => array ('slug' => 'cars' )
-	);
-
-
-
-	register_post_type('projects', $args);
-}
-
-add_action('init', 'my_project_post_type');
