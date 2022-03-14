@@ -362,6 +362,9 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/block-patterns.php';
 
+
+// project post type
+
 function my_project_post_type(){
 
 	$args = array(
@@ -384,3 +387,21 @@ function my_project_post_type(){
 }
 
 add_action('init', 'my_project_post_type');
+
+// tag
+
+// function my_first_taxonomy(){
+
+// 	$args = array(
+// 		'labels'=> array(
+// 			'name' => 'Brands',
+// 			'singular_name' => 'Brand'
+// 		),
+
+// 		'public' => true,
+// 		'hierarchical' =>true,
+// 	);
+
+// 	register_taxonomy('brands', array('projects') $args);
+// }
+// add_action('init', 'my_first_taxonomy', 0);
