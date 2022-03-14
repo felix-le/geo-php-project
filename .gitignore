@@ -476,3 +476,5 @@ DS_Store
 
 wp-includes/js/crop/cropper.js
 wp-includes/js/jquery/jquery.schedule.js
+*-lock.json
+package-lock.json

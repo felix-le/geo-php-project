@@ -1,76 +1,31 @@
-=== Twenty Twenty ===
-Contributors: the WordPress team
+=== Twenty Nineteen ===
+Contributors: wordpressdotorg
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns
+Requires at least: 4.9.6
 Tested up to: 5.8
-Stable tag: 1.8
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Default theme for 2020.
+Our 2019 default theme is designed to show off the power of the block editor.
 
 == Description ==
+Our 2019 default theme is designed to show off the power of the block editor. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you'll see on your website. Twenty Nineteen is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it's built to be beautiful on all screen sizes.
 
-Our default theme for 2020 is designed to take full advantage of the
-flexibility of the block editor. Organizations and businesses have the
-ability to create dynamic landing pages with endless layouts using the
-group and column blocks. The centered content column and fine-tuned
-typography also makes it perfect for traditional blogs. Complete editor
-styles give you a good idea of what your content will look like, even
-before you publish. You can give your site a personal touch by changing
-the background colors and the accent color in the Customizer. The colors of
-all elements on your site are automatically calculated based on the colors
-you pick, ensuring a high, accessible color contrast for your visitors.
+For more information about Twenty Nineteen please go to https://wordpress.org/support/article/twenty-nineteen/.
 
-== Changelog ==
+== Installation ==
 
-= 1.8 =
-* Released: July 20, 2021
-
-https://wordpress.org/support/article/twenty-twenty-changelog/#Version_1.8
-
-= 1.7 =
-* Released: March 9, 2021
-
-https://wordpress.org/support/article/twenty-twenty-changelog/#Version_1.7
-
-= 1.6 =
-* Released: December 8, 2020
-
-https://wordpress.org/support/article/twenty-twenty-changelog/#Version_1.6
-
-= 1.5 =
-* Released: August 11, 2020
-
-https://wordpress.org/support/article/twenty-twenty-changelog/#Version_1.5
-
-= 1.4 =
-* Released: June 10, 2020
-
-https://wordpress.org/support/article/twenty-twenty-changelog/#Version_1.4
-
-= 1.3 =
-* Released: May 14, 2020
-
-https://wordpress.org/support/article/twenty-twenty-changelog/#Version_1.3
-
-= 1.2 =
-* Released: March 31, 2020
-
-https://wordpress.org/support/article/twenty-twenty-changelog/#Version_1.2
-
-= 1.1 =
-* Released: December 12, 2019
-
-https://wordpress.org/support/article/twenty-twenty-changelog/#Version_1.1
-
-= 1.0 =
-* Released: November 12, 2019
-
-Initial release
+1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
+2. Type in Twenty Nineteen in the search form and press the 'Enter' key on your keyboard.
+3. Click on the 'Activate' button to use your new theme right away.
+4. Go to https://wordpress.org/support/article/twenty-nineteen/ for a guide on how to customize this theme.
+5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Copyright ==
 
-Twenty Twenty WordPress Theme, Copyright 2019-2021 WordPress.org
-Twenty Twenty is distributed under the terms of the GNU GPL.
+Twenty Nineteen WordPress Theme, Copyright 2018-2021 WordPress.org
+Twenty Nineteen is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -82,57 +37,73 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Twenty Twenty is derived from the Chaplin Theme, Copyright 2019 Anders Norén
-Chaplin Theme is distributed under the terms of the GNU GPL version 2.0
+== Changelog ==
 
-Twenty Twenty bundles the following third-party resources:
+= 2.1 =
+* Released: July 20, 2021
 
-Illustrations by Tammie Lister
-License: Creative Commons Zero (CC0), https://creativecommons.org/publicdomain/zero/1.0/
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_2.1
 
-Inter Font
-Copyright (c) 2016-2019 The Inter Project Authors (me@rsms.me)
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Source: https://rsms.me/inter/
+= 2.0 =
+* Released: March 9, 2021
 
-Bespoke Icons Created For Twenty Twenty
-License: Creative Commons Zero (CC0), https://creativecommons.org/publicdomain/zero/1.0/
-List of bespoke icons:
-- Search icon
-- Menu icon
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_2.0
 
-Feather Icons
-Copyright (c) 2013-2017 Cole Bemis
-License: MIT License, https://opensource.org/licenses/MIT
-Source: https://feathericons.com
-Used for post meta icons, and the link icon in the social menu.
+= 1.9 =
+* Released: December 22, 2020
 
-TikTok Icon
-License: GPLv2
-Source: Émilie Lebrun - @Emlebrun
-Used for TikTok social icon.
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.9
 
-Social Icons
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
+= 1.8 =
+* Released: December 8, 2020
 
-Code from Twenty Nineteen
-Copyright (c) 2018-2021 WordPress.org
-License: GPLv2
-Source: https://wordpress.org/themes/twentynineteen/
-Included as part of the following classes and functions:
-- TwentyTwenty_SVG_Icons
-- twentytwenty_the_theme_svg()
-- twentytwenty_get_theme_svg()
-- twentytwenty_nav_menu_social_icons()
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.8
 
-Code from Twenty Seventeen
-Copyright (c) 2016-2021 WordPress.org
-License: GPLv2
-Source: https://wordpress.org/themes/twentyseventeen/
-Included as part of the following classes and functions:
-- twentytwenty_unique_id()
+= 1.7 =
+* Released: August 11, 2020
 
-Underscores
-https://underscores.me/, (C) 2012-2021 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.7
+
+= 1.6 =
+* Released: June 10, 2020
+
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.6
+
+= 1.5 =
+* Released: March 31, 2020
+
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.5
+
+= 1.4 =
+* Released: May 7, 2019
+
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.4
+
+= 1.3 =
+* Released: February 21, 2019
+
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.3
+
+= 1.2 =
+* Released: January 9, 2019
+
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.2
+
+= 1.1 =
+* Released: December 19, 2018
+
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.1
+
+= 1.0 =
+* Released: December 6, 2018
+
+Initial release
+
+== Resources ==
+* normalize.css, © 2012-2018 Nicolas Gallagher and Jonathan Neal, MIT
+* Underscores, © 2012-2021 Automattic, Inc., GNU GPL v2 or later
+* Bundled block pattern images:
+	* Abstract Background by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-background-0SRRVNMKBX
+	* Abstract Waves by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-waves-0KREGLTZQ3
+	* Abstract Bokeh by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-bokeh-P4KVZBMQ6L
+	* Colorful Bokeh by HD Wallpapers, CC0. https://stocksnap.io/photo/colorful-bokeh-VN4G84GL8H
