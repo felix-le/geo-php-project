@@ -133,9 +133,8 @@ function my_first_post_type()
 					'singular_name' => 'Car',
 		),
 		'hierarchical' => true,
-		'public' => true,
+		'public' => false,
 		'has_archive' => true,
-		'menu_icon' => 'dashicons-images-alt2',
 		'supports' => array('title', 'editor', 'thumbnail','custom-fields'),
 		//'rewrite' => array('slug' => 'cars'),	
 
@@ -209,14 +208,22 @@ add_action('init', 'my_project_post_type');
 
 function my_project_taxonomy(){
 
-	$args = array(
-		'public' => true,
-		'hierarchical' => true,
+		$args = array(
+
+			'labels' => array(
+					'name' => 'Tags',
+					'singular_name' => 'Tag',
+			),
+
+			'public' => true,
+			'hierarchical' => true,
+
 	);
+
 
 	register_taxonomy('brands', array('projects'), $args);
 }
-add_action('init', 'my_project_taxonomy',0);
+add_action('init', 'my_project_taxonomy');
 
 
 
