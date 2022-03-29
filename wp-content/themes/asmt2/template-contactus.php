@@ -13,22 +13,19 @@ Template Name: Contact Us
 
 <section class="page-wrap">
   <div class="container">
-
-
     <h1><?php the_title();?></h1>
 
-
-
     <div class="row">
-
-
       <div class="col-lg-12">
 
         <div class="d-flex justify-content-center align-items-center">
-          <a href="#" class="mr-2"><i class="fa-brands fa-twitter" style="font-size: 60px;"></i></a>
-          <a href="#" class="mr-2"> <i class="fa-brands fa-facebook-f" style="font-size: 60px;"></i>
+          <a href="#"><i class="fa-brands fa-twitter"
+              style="font-size: 60px;background: orange; margin-right:30px;"></i></a>
+          <a href="#"> <i class="fa-brands fa-facebook-f"
+              style="font-size: 60px;background: orange; margin-right:30px;"></i>
           </a>
-          <a href="#"><i class="fa-brands fa-linkedin-in" style="font-size: 60px;"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"
+              style="font-size: 60px;background: orange;"></i></a>
         </div>
       </div>
 

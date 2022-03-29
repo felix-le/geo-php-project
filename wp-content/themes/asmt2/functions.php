@@ -178,6 +178,45 @@ add_action('init', 'my_first_taxonomy');
 
 
 
+// project custom post type
+
+// project post type
+
+function my_project_post_type(){
+
+	$args = array(
+
+		'labels'=> array(
+			'name' => 'Projects',
+			'singular_name' => 'Project'
+		),
+		'hierarchical' =>true,
+		'public' =>true,
+		'has_archive' => true,
+		'supports' => array('title', 'editor', 'thumbnail'),
+		'menu_icon' => 'dashicons-media-code',
+		// 'rewrite' => array ('slug' => 'cars' )
+	);
+
+
+
+	register_post_type('projects', $args);
+}
+
+add_action('init', 'my_project_post_type');
+
+// tag
+
+function my_project_taxonomy(){
+
+	$args = array(
+		'public' => true,
+		'hierarchical' => true,
+	);
+
+	register_taxonomy('brands', array('projects'), $args);
+}
+add_action('init', 'my_project_taxonomy',0);
 
 
 
