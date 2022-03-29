@@ -1,7 +1,7 @@
 <?php
 
 /* 
-Template Name: Car Search
+Template Name: None
 */
 
 
@@ -27,157 +27,133 @@ Template Name: Car Search
 
 
 <section class="page-wrap">
-<div class="container">
+  <div class="container">
 
 
-<div class="card">
+    <div class="card">
 
-    <div class="card-body">
-
-
-            <form action="<?php echo home_url('/car-search');?>">
+      <div class="card-body">
 
 
-            <div class="form-group">
-                <label>Type a keyword</label>
-                <input
-                type="text" 
-                name="keyword" 
-                placeholder="Type a keyword"
-                class="form-control"
-                value="<?php echo isset($_GET['keyword']) ? $_GET['keyword'] : '';?>"
-                >
-            </div>
+        <form action="<?php echo home_url('/car-search');?>">
 
 
-            <div class="form-group">
-
-                <label>Choose a brand</label>
-            
-                <select name="brand" class="form-control">
-
-                        <option value="">Choose a brand</option>
-
-                        <?php foreach($brands as $brand):?>
-                                <option 
-                                
-                                <?php if(  isset($_GET['brand']) && ( $_GET['brand'] == $brand->slug)  ):?>
-                                    selected
-                                <?php endif;?>
+          <div class="form-group">
+            <label>Type a keyword</label>
+            <input type="text" name="keyword" placeholder="Type a keyword" class="form-control"
+              value="<?php echo isset($_GET['keyword']) ? $_GET['keyword'] : '';?>">
+          </div>
 
 
-                                value="<?php echo $brand->slug;?>"><?php echo $brand->name;?></option>
-                        <?php endforeach;?>
+          <div class="form-group">
 
-                </select>
-            
-            </div>
+            <label>Choose a brand</label>
+
+            <select name="brand" class="form-control">
+
+              <option value="">Choose a brand</option>
+
+              <?php foreach($brands as $brand):?>
+              <option <?php if(  isset($_GET['brand']) && ( $_GET['brand'] == $brand->slug)  ):?>
+                selected <?php endif;?> value="<?php echo $brand->slug;?>">
+                <?php echo $brand->name;?></option>
+              <?php endforeach;?>
+
+            </select>
+
+          </div>
 
 
 
 
-            <div class="form-group row">
+          <div class="form-group row">
 
-                                <div class="col-lg-6">
+            <div class="col-lg-6">
 
-                                       <label>From price</label>
+              <label>From price</label>
 
-                                        <select name="price_above" class="form-control">
+              <select name="price_above" class="form-control">
 
-                                            <?php for($i=0; $i < 210000; $i+=10000):?>    
+                <?php for($i=0; $i < 210000; $i+=10000):?>
 
-                                                <option 
-                                                
-                                                <?php if(  isset($_GET['price_above']) && ( $_GET['price_above'] == $i)  ):?>
-                                                    selected
-                                                <?php endif;?>
-                                                
-                                                
-                                                value="<?php echo $i;?>">
-                                                    <?php echo '$' . number_format($i) ;?>
-                                                </option>
+                <option
+                  <?php if(  isset($_GET['price_above']) && ( $_GET['price_above'] == $i)  ):?>
+                  selected <?php endif;?> value="<?php echo $i;?>">
+                  <?php echo '$' . number_format($i) ;?>
+                </option>
 
-                                            <?php endfor;?>
+                <?php endfor;?>
 
-                                        </select>
-
-                                </div>
-
-                                <div class="col-lg-6">
-
-                                        <label>To Price</label>
-
-                                        <select name="price_below" class="form-control">
-
-                                            <?php for($i=0; $i < 210000; $i+=10000):?>    
-
-                                                <option 
-                                                
-                                                <?php if(  isset($_GET['price_below']) && ( $_GET['price_below'] == $i)  ):?>
-                                                    
-                                                    selected
-
-                                                <?php elseif( $i == 200000):?>
-
-                                                    selected
-
-                                                <?php endif;?>
-                                                
-                                                
-                                                value="<?php echo $i;?>">
-                                                    <?php echo '$' . number_format($i) ;?>
-                                                </option>
-
-                                            <?php endfor;?>
-
-                                        </select>
-
-                                </div>
+              </select>
 
             </div>
 
+            <div class="col-lg-6">
 
-            <button type="submit" class="btn btn-success btn-lg btn-block">Search</button>
+              <label>To Price</label>
 
-        
-            <a href="<?php echo home_url('/car-search');?>">Reset search</a>
+              <select name="price_below" class="form-control">
 
-            </form>
+                <?php for($i=0; $i < 210000; $i+=10000):?>
 
+                <option
+                  <?php if(  isset($_GET['price_below']) && ( $_GET['price_below'] == $i)  ):?>
+                  selected <?php elseif( $i == 200000):?> selected <?php endif;?>
+                  value="<?php echo $i;?>">
+                  <?php echo '$' . number_format($i) ;?>
+                </option>
 
+                <?php endfor;?>
 
+              </select>
 
+            </div>
 
-
-
-
-
-
-
-
-
-
-            <?php if($is_search):?>
-
-            <?php if( $query->have_posts() ) :?>
+          </div>
 
 
+          <button type="submit" class="btn btn-success btn-lg btn-block">Search</button>
 
-                    <?php while( $query->have_posts() ) : $query->the_post();?>
 
-                        <a href="<?php the_post_thumbnail_url('blog-large');?>">
-                            <img src="<?php the_post_thumbnail_url('blog-large');?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail">
-                        </a>
+          <a href="<?php echo home_url('/car-search');?>">Reset search</a>
 
-                        <h3><?php the_title();?></h3>
-
-                    <?php endwhile;?>
+        </form>
 
 
 
-                    
-                    <div class="pagination">
-                    <?php 
+
+
+
+
+
+
+
+
+
+
+
+        <?php if($is_search):?>
+
+        <?php if( $query->have_posts() ) :?>
+
+
+
+        <?php while( $query->have_posts() ) : $query->the_post();?>
+
+        <a href="<?php the_post_thumbnail_url('blog-large');?>">
+          <img src="<?php the_post_thumbnail_url('blog-large');?>" alt="<?php the_title();?>"
+            class="img-fluid mb-3 img-thumbnail">
+        </a>
+
+        <h3><?php the_title();?></h3>
+
+        <?php endwhile;?>
+
+
+
+
+        <div class="pagination">
+          <?php 
                         echo paginate_links( array(
                             'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
                             'total'        => $query->max_num_pages,
@@ -194,37 +170,37 @@ Template Name: Car Search
                             'add_fragment' => '',
                         ) );
                     ?>
-                </div>
+        </div>
 
 
 
 
-                <?php wp_reset_postdata();?>
-            
-            <?php else:?>
+        <?php wp_reset_postdata();?>
 
-            <div class="clearfix mb-3"></div>
+        <?php else:?>
 
-            <div class="alert alert-danger">There are no results</div>
+        <div class="clearfix mb-3"></div>
 
-
-            <?php endif;?>
-
-            <?php endif;?>
+        <div class="alert alert-danger">There are no results</div>
 
 
+        <?php endif;?>
+
+        <?php endif;?>
 
 
 
+
+
+
+      </div>
 
     </div>
 
-</div>
 
 
 
-
-</div>
+  </div>
 </section>
 
 

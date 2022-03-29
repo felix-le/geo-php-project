@@ -6,7 +6,7 @@ if( !class_exists('acf')) {
     die();
 }
 
-/* Template Name: ACF Tutorial */
+/* Template Name: None2 */
 
 get_header();
 
@@ -23,36 +23,36 @@ $colour = get_field('select_a_colour');
 <?php if($active):?>
 
 
-    <div class="container py-5">
-
-   
-        <?php if($name):?>
-            <h1><?php echo $name;?></h1>
-        <?php endif;?>
+<div class="container py-5">
 
 
-        <?php if($description):?>
-            <?php echo $description;?>
-        <?php endif;?>
+  <?php if($name):?>
+  <h1><?php echo $name;?></h1>
+  <?php endif;?>
+
+
+  <?php if($description):?>
+  <?php echo $description;?>
+  <?php endif;?>
 
 
 
 
-        <?php if( is_array($colour) ):?>
-          <?php if(in_array('red', $colour)):?>
+  <?php if( is_array($colour) ):?>
+  <?php if(in_array('red', $colour)):?>
 
-            Red is selected
+  Red is selected
 
-          <?php endif;?>
-        <?php endif;?>
+  <?php endif;?>
+  <?php endif;?>
 
 
-    </div>
+</div>
 
 
 <?php else:?>
 
-        <div class="container">The page is not active</div>
+<div class="container">The page is not active</div>
 
 <?php endif;?>
 
