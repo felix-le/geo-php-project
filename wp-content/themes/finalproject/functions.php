@@ -35,3 +35,53 @@ register_nav_menus(
     'footer-menu' => __( 'Footer Menu', 'theme' )
   )
 );
+
+
+// custom Image size
+
+add_image_size('blog-large', 800, 400, false);
+add_image_size('blog-small', 800, 400, true);
+
+
+
+
+// Pet custom post type
+
+// Pet post type
+
+function my_pet_post_type(){
+
+	$args = array(
+
+		'labels'=> array(
+			'name' => 'Pets',
+			'singular_name' => 'Pet'
+		),
+		'hierarchical' =>true,
+		'public' =>true,
+		'has_archive' => true,
+		'supports' => array('title', 'editor', 'thumbnail'),
+		'menu_icon' => 'dashicons-pets',
+	);
+
+
+
+	register_post_type('pets', $args);
+}
+
+add_action('init', 'my_pet_post_type');
+
+// tag
+
+function my_pet_taxonomy(){
+
+		$args = array(
+			'public' => true,
+			'hierarchical' => true,
+
+	);
+
+
+	register_taxonomy('type', array('pets'), $args);
+}
+add_action('init', 'my_pet_taxonomy');
