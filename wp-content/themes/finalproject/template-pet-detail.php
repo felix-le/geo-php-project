@@ -25,7 +25,7 @@
 
     <?php if(has_post_thumbnail()):?>
     <div class="col-9">
-      <?php get_template_part('includes/section','blogcontent');?>
+      <?php get_template_part('includes/section','pets');?>
     </div>
 
     <?php endif;?>
