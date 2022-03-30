@@ -17,5 +17,29 @@
 
 <body>
 
-
-  <h1>this is the header</h1>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- functions.php -->
+        <?php 
+        wp_nav_menu( array(
+            'menu'    => 'top-menu',
+            // container
+            'container' => 'div',
+            'container_id' => 'navbarNavDropdown',
+            'container_class' => 'collapse navbar-collapse',
+            'menu_class' => 'navbar-nav',
+            'li_class'          => 'nav-item',
+            'a_class'           => 'nav-link',
+            'active_class'      => 'active',
+        ) );
+         
+        ?>
+      </div>
+    </nav>
+  </header>
