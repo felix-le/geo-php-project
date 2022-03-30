@@ -85,6 +85,14 @@ function my_pet_taxonomy(){
 	);
 
 
-	register_taxonomy('brands', array('pets'), $args);
+	register_taxonomy('tags', array('pets'), $args);
 }
 add_action('init', 'my_pet_taxonomy');
+
+// shortcode
+
+function signal_shortcode(){
+	return '<h3 class="color:orange;">Felix Le</h3>';
+}
+
+add_shortcode('signal_shortcode', 'signal_shortcode');
