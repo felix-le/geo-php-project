@@ -1,47 +1,39 @@
 <?php get_header();?>
 
 <section class="page-wrap">
-<div class="container">
-	
-	
-
-<h1><?php the_title();?></h1>
-
-			
-			<?php if(has_post_thumbnail()):?>
-				<div class="gallery">
-					<a href="<?php the_post_thumbnail_url('blog-large');?>">
-						<img src="<?php the_post_thumbnail_url('blog-large');?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail">
-					</a>
-				</div>
-			<?php endif;?>
+  <div class="container">
 
 
 
+    <h1><?php the_title();?></h1>
 
 
+    <?php if(has_post_thumbnail()):?>
+    <div class="gallery">
+      <a href="<?php the_post_thumbnail_url('blog-large');?>">
+        <img src="<?php the_post_thumbnail_url('blog-large');?>" alt="<?php the_title();?>"
+          class="img-fluid mb-3 img-thumbnail">
+      </a>
+    </div>
+    <?php endif;?>
 
-
-
-					<?php
+    <?php
 					$gallery = get_field('gallery');
 					if($gallery):?>
 
-						<div class="gallery mb-5">
-				
-								<?php foreach($gallery as $image):?>
+    <div class="gallery mb-5">
 
-								<a href="<?php echo $image['sizes']['blog-large'];?>">
-									<img src="<?php echo $image['sizes']['blog-small'];?>" class="img-fluid img-thumbnail">
-								</a>
+      <?php foreach($gallery as $image):?>
 
-								<?php endforeach;?>
-					
-						</div>
+      <a href="<?php echo $image['sizes']['blog-large'];?>">
+        <img src="<?php echo $image['sizes']['blog-small'];?>" class="img-fluid img-thumbnail">
+      </a>
 
-					<?php endif;?>
+      <?php endforeach;?>
 
+    </div>
 
+    <?php endif;?>
 
 
 
@@ -49,71 +41,71 @@
 
 
 
-	<div class="row">
-					
-
-				<div class="col-lg-6">
-					
-
-							<?php get_template_part('includes/section','cars');?>
-							<?php wp_link_pages();?>
-
-				</div>
 
 
-				<div class="col-lg-6">
+    <div class="row">
 
 
-					<?php get_template_part('includes/form','enquiry');?>
-
-					
-					<ul>
-						<li>
-
-							Colour: <?php the_field('colour');?>
-							
-						</li>
+      <div class="col-lg-6">
 
 
+        <?php get_template_part('includes/section','cars');?>
+        <?php wp_link_pages();?>
 
-						
-						<li>
-
-							Registration: <?php the_field('registration');?>
-							
-						</li>
-					 
+      </div>
 
 
-					</ul>
+      <div class="col-lg-6">
+
+
+        <?php get_template_part('includes/form','enquiry');?>
+
+
+        <ul>
+          <li>
+
+            Colour: <?php the_field('colour');?>
+
+          </li>
 
 
 
 
-					<h3>Features</h3>
+          <li>
 
-					<ul>
-						
-						<?php if(have_rows('features')):?>
-						
-							<?php 
+            Registration: <?php the_field('registration');?>
+
+          </li>
+
+
+
+        </ul>
+
+
+
+
+        <h3>Features</h3>
+
+        <ul>
+
+          <?php if(have_rows('features')):?>
+
+          <?php 
 							while( have_rows('features')): the_row();
 							$feature = get_sub_field('feature');
 							?>
 
-							<li>
-								
-								<?php echo $feature;?>
+          <li>
 
-							</li>
+            <?php echo $feature;?>
 
-							<?php endwhile;?>
+          </li>
 
-						<?php endif;?>
+          <?php endwhile;?>
 
-					</ul>
+          <?php endif;?>
 
-
+        </ul>
 
 
 
@@ -138,17 +130,19 @@
 
 
 
-				</div>
+
+
+      </div>
 
 
 
-	</div>
-			
+    </div>
 
 
 
 
-</div>
+
+  </div>
 </section>
 
 

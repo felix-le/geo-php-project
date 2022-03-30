@@ -4,7 +4,7 @@ add_theme_support( 'menus' );
 register_nav_menus(array(
   'top-menu' => __('Top Menu', 'theme')
 ));
-
+add_theme_support('post-thumbnails');
 function add_class_li( $classes, $item, $args ) {
   if(isset($args->li_class)) {
     $classes[] = $args->li_class;
@@ -43,12 +43,8 @@ add_image_size('blog-large', 800, 400, false);
 add_image_size('blog-small', 800, 400, true);
 
 
-
-
 // Pet custom post type
-
-// Pet post type
-
+ 
 function my_pet_post_type(){
 
 	$args = array(
@@ -60,8 +56,9 @@ function my_pet_post_type(){
 		'hierarchical' =>true,
 		'public' =>true,
 		'has_archive' => true,
-		'supports' => array('title', 'editor', 'thumbnail'),
-		'menu_icon' => 'dashicons-pets',
+		'supports' => array('title',   'editor', 'custom-fields', 'thumbnail' ),
+		// 'rewrite' => array ('slug' => 'cars' )
+    'menu_icon' => 'dashicons-pets',
 	);
 
 
@@ -76,12 +73,18 @@ add_action('init', 'my_pet_post_type');
 function my_pet_taxonomy(){
 
 		$args = array(
+
+			'labels' => array(
+					'name' => 'Tags',
+					'singular_name' => 'Tag',
+			),
+
 			'public' => true,
 			'hierarchical' => true,
 
 	);
 
 
-	register_taxonomy('type', array('pets'), $args);
+	register_taxonomy('brands', array('pets'), $args);
 }
 add_action('init', 'my_pet_taxonomy');
