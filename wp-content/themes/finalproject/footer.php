@@ -1,5 +1,5 @@
  <footer>
-   <div class="container">
+   <div class="container d-flex justify-content-center flex-column align-items-center text-center">
 
      <p> Contact me now!</p>
      <div class="d-flex">
